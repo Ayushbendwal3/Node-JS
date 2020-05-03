@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ayush's To-DoList App</title>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>My To-Do list</h1>
+    <div id="todo-table">
+      <form method="POST">
+        <input
+          type="text"
+          name="item"
+          placeholder="Add new item...."
+          required
+        />
+        <button type="submit">Add item</button>
+      </form>
+      <ul>
+        <% for(var i=0; i < todos.length; i++) { %>
+        <li><%=todos[i].item %></li>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+</html>
